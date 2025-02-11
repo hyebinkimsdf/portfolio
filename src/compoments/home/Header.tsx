@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
+
 export function Header() {
   return (
-    <div className="bg-yellow-200 w-full h-10 ">
-      <p>main</p>
-      <p>about</p>
+    <div className="bg-black w-full h-10  text-white px-4 felx items-center justify-center">
+      <Link to="/">main</Link>
     </div>
   );
 }

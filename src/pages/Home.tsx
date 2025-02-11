@@ -3,9 +3,9 @@ import { ProjectCard } from "../compoments/home/ProjectCard";
 
 export default function Home() {
   return (
-    <>
-      <p>홈페이지입니다</p>
+    <div className="w-screen h-screen flex justify-center items-center bg-slate-500">
       <ProjectCard name={"eyecane"} link={"/Eyecane"} />
-    </>
+      <ProjectCard name={"eyecane"} link={"/Eyecane"} />
+    </div>
   );
 }
