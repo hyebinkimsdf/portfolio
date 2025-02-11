@@ -1,7 +1,9 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
+// vite.config.ts
+import { defineConfig } from "vite";
 
-// https://vite.dev/config/
+import tailwindcss from "@tailwindcss/vite"; // Tailwind CSS 플러그인
+import react from "react";
+
 export default defineConfig({
-  plugins: [react()],
-})
+  plugins: [react(), tailwindcss()], // 리액트와 Tailwind CSS 플러그인 적용
+});
