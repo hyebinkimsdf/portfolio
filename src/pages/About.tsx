@@ -72,7 +72,7 @@ export default function About() {
         </motion.div>
 
         <motion.p
-          className="opacity-50 text-sm text-center mb-4"
+          className="opacity-50 text-sm text-start mb-4 w-full "
           variants={itemVariants}
         >
           개발자와 디테일한 소통이 가능하며 3D 구현에 능숙한 UX/UI 디자이너
