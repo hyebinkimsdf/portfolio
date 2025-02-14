@@ -5,15 +5,16 @@ import "./index.css";
 import Home from "./pages/Home";
 import Eyecane from "./pages/Eyecane";
 import { Header } from "./compoments/home/Header";
-import ScrollToTop from "./hooks/useScrollToTop";
+
+import useScrollToTop from "./hooks/useScrollToTop";
 
 function App() {
+  useScrollToTop();
   return (
     <>
-      <ScrollToTop />
       <div className="app">
-        <Header />
         <main className="content">
+          <Header />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Eyecane" element={<Eyecane />} />
