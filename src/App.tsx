@@ -5,7 +5,7 @@ import "./index.css";
 import Home from "./pages/Home";
 import Eyecane from "./pages/Eyecane";
 import { Header } from "./compoments/home/Header";
-import ScrollToTop from "./hook/ScrollToTop";
+import ScrollToTop from "./hooks/useScrollToTop";
 
 function App() {
   return (
