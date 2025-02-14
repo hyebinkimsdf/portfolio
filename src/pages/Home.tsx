@@ -28,7 +28,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-black min-h-screen flex items-center justify-center">
+      <div
+        className="bg-black min-h-screen flex items-center justify-center"
+        id="about"
+      >
         <About />
       </div>
       <ProjectList />
