@@ -1,4 +1,5 @@
 import About from "./about";
+import { ProjectList } from "./ProjectList";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
       <div className="bg-black min-h-screen flex items-center justify-center">
         <About />
       </div>
+      <ProjectList />
     </div>
   );
 }
