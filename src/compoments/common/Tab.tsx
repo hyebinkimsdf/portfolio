@@ -1,25 +1,25 @@
 import { useState } from "react";
 
-interface TabProps {
-  background: string;
-  designSystem: string;
-  design: string;
+interface TabProp {
+  background: React.ReactNode;
+  designSystem: React.ReactNode;
+  design: React.ReactNode;
 }
 
-export function Tab({ background, designSystem, design }: TabProps) {
+export function Tab({ background, designSystem, design }: TabProp) {
   const [selectedTab, setSelectedTab] = useState("BACK GROUND");
 
   const tabs = ["BACK GROUND", "DESIGN SYSTEM", "UX/UI DESIGN"];
 
-  // 탭 컨텐츠를 렌더링하는 함수
+  // JSX 요소를 반환하도록 수정
   const renderContent = () => {
     switch (selectedTab) {
       case "BACK GROUND":
-        return <div className="py-8">{background}</div>;
+        return <div className="py-8 w-full max-w-[1128px]">{background}</div>;
       case "DESIGN SYSTEM":
-        return <div className="py-8">{designSystem}</div>;
+        return <div className="py-8 w-full max-w-[1128px]">{designSystem}</div>;
       case "UX/UI DESIGN":
-        return <div className="py-8">{design}</div>;
+        return <div className="py-8 w-full max-w-[1128px]">{design}</div>;
       default:
         return null;
     }
