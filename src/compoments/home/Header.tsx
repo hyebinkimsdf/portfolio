@@ -1,30 +1,71 @@
-import { Link } from "react-router-dom";
-import { Link as ScrollLink } from "react-scroll";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { scroller } from "react-scroll";
+import { useEffect, useState } from "react";
 
 export function Header() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [key, setKey] = useState(0);
+
+  useEffect(() => {
+    if (location.pathname === "/" && location.hash) {
+      const element = location.hash.replace("#", "");
+      scroller.scrollTo(element, {
+        duration: 500,
+        smooth: true,
+        offset: -58,
+      });
+      // 스크롤 후 해시 제거
+      navigate("/", { replace: true });
+    }
+  }, [location, navigate]);
+
+  const handleLogoClick = (e: { preventDefault: () => void }) => {
+    if (location.pathname === "/") {
+      e.preventDefault();
+      setKey((prev) => prev + 1);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      // 해시 제거
+      navigate("/", { replace: true });
+    }
+  };
+
+  const handleNavigation = (sectionId: string) => {
+    if (location.pathname === "/") {
+      scroller.scrollTo(sectionId, {
+        duration: 500,
+        smooth: true,
+        offset: -58,
+      });
+      // 스크롤 후 해시 제거
+      navigate("/", { replace: true });
+    } else {
+      // 다른 페이지에서 올 때는 해시 유지
+      navigate(`/#${sectionId}`);
+    }
+  };
+
   return (
     <div className="fixed top-0 left-0 w-full h-[10vh] max-h-[64px] bg-black text-white flex items-center justify-center z-50 opacity-90">
-      <Link to="/" className="mx-4">
-        Hyebin kim
-      </Link>
-      {/* react-scroll을 사용한 링크 */}
-      <ScrollLink
-        to="about" // about 섹션으로 스크롤
-        smooth={true}
-        duration={500} // 애니메이션 시간 (ms)
+      <div>
+        <Link to="/" className="mx-4" onClick={handleLogoClick} key={key}>
+          Hyebin kim
+        </Link>
+      </div>
+
+      <div
         className="mx-4 cursor-pointer"
+        onClick={() => handleNavigation("about")}
       >
         about
-      </ScrollLink>
+      </div>
 
-      <ScrollLink
-        to="ProjectList" // about 섹션으로 스크롤
-        smooth={true}
-        duration={500} // 애니메이션 시간 (ms)
+      <div
         className="mx-4 cursor-pointer"
+        onClick={() => handleNavigation("ProjectList")}
       >
         project
-      </ScrollLink>
+      </div>
     </div>
   );
 }
