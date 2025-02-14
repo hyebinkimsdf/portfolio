@@ -17,7 +17,7 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/Eyecane" element={<Eyecane />} />
+            <Route path="/eyecane" element={<Eyecane />} />
           </Routes>
         </main>
       </div>
