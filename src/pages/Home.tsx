@@ -1,4 +1,4 @@
-import About from "./about";
+import About from "./About";
 import { ProjectList } from "./ProjectList";
 
 export default function Home() {
