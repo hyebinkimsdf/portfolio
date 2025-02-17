@@ -2,22 +2,141 @@ import { CircleChart } from "../common/CircleChart";
 
 export function EyeBackground() {
   return (
-    <div className="w-full flex flex-col justify-center mb-20 border-b-white">
-      <p className="w-full text-center mb-4">Overview</p>
-      <p className="w-full text-center mb-10 text-4xl font- max-w-">
-        저시력자들은 일상에서 정말 많은 어려움을 겪고 있을까?
-      </p>
-      <div className="flex w-full justify-center gap-10">
-        <CircleChart />
-        <div>
-          <p className="max-w-[480px] w-full">
-            한국시각장애인연합회(KFVB, 2020) 조사에 따르면, 저시력자의 약 70%가
-            이동(보행, 대중교통 이용)에 어려움을 겪고 있으며, 60%는 독립적인
-            일상생활(독서, 쇼핑, 요리 등)에 어려움을 호소했습니다.
-          </p>
-          <p className="opacity-50 mt-2">출처: 한국시각장애인연합회 보고서</p>
+    <>
+      <div className="w-full flex flex-col justify-center mb-20 border-b-gray-500 border-b-[1px] pb-10">
+        <p className="w-full text-center mb-10 text-lg ">Overview</p>
+        <p className="w-full text-center mb-10 text-4xl font-semibold">
+          저시력자들은 일상에서 정말 많은 어려움을 겪고 있을까?
+        </p>
+        <div className="flex w-full justify-center gap-10">
+          <CircleChart />
+          <div>
+            <p className="max-w-[480px] w-full">
+              한국시각장애인연합회(KFVB, 2020) 조사에 따르면, 저시력자의 약
+              70%가 이동(보행, 대중교통 이용)에 어려움을 겪고 있으며, 60%는
+              독립적인 일상생활(독서, 쇼핑, 요리 등)에 어려움을 호소했습니다.
+            </p>
+            <p className="opacity-50 mt-2">출처: 한국시각장애인연합회 보고서</p>
+          </div>
         </div>
       </div>
-    </div>
+
+      <div className="w-full flex flex-col justify-center mb-20 border-b-gray-500 border-b-[1px] pb-10">
+        <div className="flex w-full justify-center gap-10">
+          <div>
+            <p className="w-full text-center mb-10 text-4xl font-semibold">
+              관심도에 비해 낮은 사용자 수
+            </p>
+            <p className="max-w-[480px] w-full">
+              2021년 시각장애인 기술 활용 실태조사에 따르면, 한국의 시각장애인
+              중 30%만이 보조기기(스마트폰 앱, AR 글래스 등)를 사용하고 있으며,
+              나머지는 비용, 접근성, 사용 편의성 문제로 기술 활용에 어려움을
+              겪고 있습니다.
+            </p>
+            <p className="opacity-50 mt-2">출처: 한국정보화진흥원</p>
+          </div>
+          <CircleChart />
+        </div>
+      </div>
+
+      <div className="w-full flex flex-col justify-center mb-20  pb-10">
+        <p className="w-full text-center mb-10 text-lg ">Persona</p>
+        <p className="w-full text-center mb-10 text-sm opacity-80">
+          퍼소나를 설정하고, 서비스 이용의 니즈를 구체화 하였어요.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {[
+            {
+              img: "/images/eyecane/person_minsu.png",
+              alt: "페르소나 민수 프로필",
+              desc: "황반변성 | 강민수 / 56세 / 편의점 점주님",
+              quote: "작은 글씨와 어두운 환경이 가장 불편해요",
+              painpoints: [
+                "상품의 가격표나 유통기한을 확인하는 데 어려움이 있음.",
+                "낮과 밤의 밝기 변화에 시야가 쉽게 적응하지 못함.",
+                "앱이 복잡하면 조작하기 더 어렵다.",
+              ],
+            },
+            {
+              img: "/images/eyecane/person_jimin.png",
+              alt: "페르소나 최지민 프로필",
+              desc: "선천적 망막색소변성증 | 최지민 / 22세 / 대학생",
+              quote: "길을 찾는 것도, 사람을 알아보는 것도 쉽지 않다.",
+              painpoints: [
+                "강의실을 찾을 때 주변 표지판을 읽기 어렵다.",
+                "어두운 곳에서는 시야가 급격히 좁아져 계단이나 장애물을 인식하는 데 어려움을 겪는다.",
+              ],
+            },
+          ].map((persona) => (
+            <div
+              key={persona.desc}
+              className="w-full min-h-[400px] border-gray-500 border rounded-xl flex flex-col items-center justify-center px-6 py-8 gap-4 shadow-md"
+            >
+              <img
+                className="max-w-[150px] max-h-[150px]"
+                src={persona.img}
+                alt={persona.alt}
+              />
+              <p className="text-sm text-center">{persona.desc}</p>
+              <p className="text-2xl font-semibold text-center">
+                “ {persona.quote} ”
+              </p>
+              <div className="w-full">
+                <p className="text-base font-medium">Needs & Painpoints</p>
+                <ul className="list-disc list-inside text-sm">
+                  {persona.painpoints.map((point, index) => (
+                    <li key={index}>{point}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="w-full flex flex-col justify-center mb-20  pb-10">
+        <p className="w-full text-center mb-10 text-lg ">UX Goal</p>
+        <p className="w-full text-center mb-10 text-sm opacity-80">
+          AR 글라스 앱의 주 사용자의 환경을 구체화하여 목표의 방향을 잡았어요
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+          {[
+            { icon: "what", title: "What" },
+            { icon: "who", title: "Who" },
+            { icon: "when", title: "When" },
+            { icon: "location", title: "Where" },
+          ].map((item) => (
+            <div
+              key={item.title}
+              className="bg-white h-[260px] text-center rounded-xl text-black flex flex-col justify-center items-center gap-4 p-4 shadow-md"
+            >
+              <img
+                src={`/icons/${item.icon}.svg`}
+                alt={`${item.title} 아이콘`}
+              />
+              <p className="text-lg font-semibold">{item.title}</p>
+              <p className="px-4 text-sm">
+                저시력자가 일상생활에서 겪는 정보 접근성과 이동의 어려움을
+                해결하는 AR 글라스 연동 앱
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="w-full flex flex-col justify-center mb-20  pb-10">
+        <p className="w-full text-center mb-10 text-lg ">Project Goal</p>
+        <p className="w-full text-center mb-10 text-sm opacity-80">
+          사용자의 고충과 니즈를 충족하여 개선하는 방향으로 목표를 수립하였어요
+        </p>
+        <div className="flex flex-col text-center">
+          <p>챌린지 분석</p>
+          <div className="bg-[#36373C] w-full h-[132px] text-white flex flex-col ">
+            <p>정보 인식 문제</p>
+            <p>장애물, 장애적 요소로 인한 시야 가림으로 시야 인식이 어려움</p>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
