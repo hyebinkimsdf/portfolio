@@ -124,18 +124,80 @@ export function EyeBackground() {
         </div>
       </div>
 
-      <div className="w-full flex flex-col justify-center mb-20  pb-10">
-        <p className="w-full text-center mb-10 text-lg ">Project Goal</p>
+      <div className="w-full flex flex-col justify-center mb-20 pb-10">
+        <h2 className="w-full text-center mb-10 text-lg">Project Goal</h2>
         <p className="w-full text-center mb-10 text-sm opacity-80">
           사용자의 고충과 니즈를 충족하여 개선하는 방향으로 목표를 수립하였어요
         </p>
-        <div className="flex flex-col text-center">
-          <p>챌린지 분석</p>
-          <div className="bg-[#36373C] w-full h-[132px] text-white flex flex-col ">
-            <p>정보 인식 문제</p>
-            <p>장애물, 장애적 요소로 인한 시야 가림으로 시야 인식이 어려움</p>
+
+        <div className="flex flex-col text-center justify-center items-center gap-6">
+          <div className="flex w-full text-center justify-between">
+            <h3 className="mb-4 font-bold text-xl w-full text-center max-w-[480px]">
+              챌린지 분석
+            </h3>
+            <h3 className="mb-4 font-bold text-xl w-full max-w-[480px] text-center">
+              이슈 도출
+            </h3>
           </div>
+
+          {[
+            {
+              challenge: "정보 인식 문제",
+              description:
+                "장애물, 장애적 요소로 인한 시야 가림으로 시야 인식이 어려움",
+              solution: "시야 커스텀",
+              solutionDesc:
+                "안보이는 부분을 시야를 이동, 확대하고 필터로 상황에 맞게 대비, 색상을 조절하여 커스텀할 수 있음",
+            },
+            {
+              challenge: "사용자 피로도",
+              description:
+                "작은 글씨와 낮은 대비 색상 사용으로 가독성 문제 발생",
+              solution: "인지, 사용 부담 감소",
+              solutionDesc:
+                "최적화된 컬러 대비 및 폰트 적용 깔끔한 가로형 큰 버튼 사용",
+            },
+            {
+              challenge: "사용자 학습 부담",
+              description:
+                "복잡한 UI로 인해 신규 사용자의 평균 적응 시간이 많이 소요됨",
+              solution: "직관적 UI로 적응 시간 단축",
+              solutionDesc: "가이드가 명확한 UI 적용 시 평균 적응 시간 단축",
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="flex items-center w-full justify-between"
+            >
+              <div className="bg-[#36373C] w-full h-[132px] text-white flex flex-col items-center justify-center gap-2 rounded-xl max-w-[480px] px-12">
+                <h4 className="font-bold">{item.challenge}</h4>
+                <p className="text-xs">{item.description}</p>
+              </div>
+              <img
+                src="/icons/next.png"
+                alt="다음 아이콘"
+                className="w-4 h-5 mx-2"
+              />
+              <div className="bg-gradient-to-r from-[#C2C6FF] to-[#9ADFFF] w-full h-[132px] text-black flex flex-col items-center justify-center gap-2 rounded-xl max-w-[480px] px-12">
+                <h4 className="font-bold">{item.solution}</h4>
+                <p className="text-xs max-w">{item.solutionDesc}</p>
+              </div>
+            </div>
+          ))}
         </div>
+      </div>
+
+      <div className="w-full flex flex-col justify-center mb-20 pb-10">
+        <h2 className="w-full text-center mb-10 text-lg">Service Flow</h2>
+        <p className="w-full text-center mb-10 text-sm opacity-80">
+          사용자의 불편함을 최소화하고 직관적인 경험을 제공하기 위해 단계별
+          서비스 흐름을 설계하였어요.
+        </p>
+        <img
+          className="bg-[#595B6A] px-2 py-2 rounded-xl"
+          src="images/eyecane/ServiceFlow.png"
+          alt="서비스플로우 이미지"
+        />
       </div>
     </>
   );
