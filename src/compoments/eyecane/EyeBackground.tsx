@@ -2,7 +2,7 @@ import { CircleChart } from "../common/CircleChart";
 
 export function EyeBackground() {
   return (
-    <>
+    <div className="max-w-[1128px]">
       <div className="w-full flex flex-col justify-center mb-20 border-b-gray-500 border-b-[1px] pb-10">
         <p className="w-full text-center mb-10 text-lg ">Overview</p>
         <p className="w-full text-center mb-10 text-4xl font-semibold">
@@ -199,6 +199,6 @@ export function EyeBackground() {
           alt="서비스플로우 이미지"
         />
       </div>
-    </>
+    </div>
   );
 }
