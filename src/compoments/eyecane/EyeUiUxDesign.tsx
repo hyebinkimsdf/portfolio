@@ -43,6 +43,59 @@ export function EyeUiUxDesign() {
           </p>
         </div>
       </div>
+      {/* Camera Section */}
+      <div className="flex flex-col md:flex-row gap-6 md:gap-4 Home mb-20">
+        <div className="flex flex-col gap-4 md:flex-1">
+          <p className="text-lg md:text-xl">Camera</p>
+          <p className="bg-gradient-to-r from-[#C1C7FE] to-[#A3D9FF] text-transparent bg-clip-text font-bold text-2xl sm:text-3xl md:text-4xl">
+            사용자의 시야를 대신 <br />
+            보여드립니다!
+          </p>
+          <p className="leading-loose text-sm md:text-base max-w-[550px]">
+            시각적으로 불편한 사용자를 위해 휴대폰의 형태를 이용하여 각 모서리에
+            아이콘이 배치되어 사용자가 버튼 위치를 보다 쉽게 인지하도록 UX
+            디자인을 했습니다.
+            <br />
+            <br /> 또한 카메라화면이 사용자의 시야인 만큼 UI가 일상 생활에
+            불편감을 주지 않기 위해 뒷 배경이 보이는 라인 아이콘을
+            사용하였습니다.
+            <br />
+            <br /> Settings에서 설정한 디스플레이를 북마크로 저장해서 상황에
+            맞는 대비, 밝기, 색상으로 손 쉽게 바뀌어볼 수 있습니다.
+          </p>
+        </div>
+        <div className="w-full md:w-auto flex justify-center">
+          <img
+            src="/images/eyecane/Camera.png"
+            alt="eyecane Camera 화면"
+            className="w-full max-w-[400px] md:max-w-none object-contain"
+          />
+        </div>
+      </div>
+      {/* Camera Section 2 */}
+      <div className="flex flex-col md:flex-row gap-6 md:gap-4 Home mb-20">
+        <div className="flex flex-col gap-4 md:flex-1">
+          <p className="text-lg md:text-xl">Camera</p>
+          <p className="bg-gradient-to-r from-[#C1C7FE] to-[#A3D9FF] text-transparent bg-clip-text font-bold text-2xl sm:text-3xl md:text-4xl">
+            음성 인식으로도 조작
+          </p>
+          <p className="leading-loose text-sm md:text-base max-w-[550px]">
+            터치패드로 사용할 뿐만 아니라 음성 인식으로 기능을 사용할 수
+            있습니다.
+            <br />
+            <br /> 선택 시 버튼이 활성화 디자인으로 교체됩니다. 푸른 계열의
+            그라데이션을 사용하여 브랜드의 전문적이면서 세련된 느낌을 사용자에게
+            부여합니다.
+          </p>
+        </div>
+        <div className="w-full md:w-auto flex justify-center">
+          <img
+            src="/images/eyecane/Camera2.png"
+            alt="eyecane Camera 화면 2"
+            className="w-full max-w-[400px] md:max-w-none object-contain"
+          />
+        </div>
+      </div>
     </div>
   );
 }
