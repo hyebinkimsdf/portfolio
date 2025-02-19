@@ -1,8 +1,6 @@
-import { Nav } from "../compoments/common/Nav";
-
 export function Naver() {
   return (
-    <div className="w-full min-h-screen pt-10 bg-[#F5F5F5] text-[#3B3838] flex flex-col justify-center items-center mx-auto px-4 pb-20">
+    <div className="w-full min-h-screen pt-10 bg-[#F5F5F5] text-[#3B3838] flex flex-col justify-center items-center mx-auto px-4 pb-10">
       <div className="text-center w-full flex flex-col justify-center items-center mt-20 pb-20 border-b-gray-500 border-b-[1px]">
         <p className="text-[40px] md:text-[60px] font-bold mb-4 text-[#03C75A]">
           Naver 디지털 ASR
@@ -47,7 +45,7 @@ export function Naver() {
       </div>
 
       <div
-        className="flex flex-col text-center font-bold text-lg  my-20"
+        className="flex flex-col text-center font-bold text-lg  mt-20"
         id="UiUx"
       >
         <p>네이버 플레이스</p>
@@ -66,7 +64,7 @@ export function Naver() {
           />
         </div>
         <p>네이버 고객센터</p>
-        <div className="flex flex-wrap justify-center gap-4 my-20 text-center font-bold text-lg ">
+        <div className="flex flex-wrap justify-center gap-4 mt-20 text-center font-bold text-lg ">
           <img
             src="/images/naver/naver04.png"
             className="max-w-[250px]  w-[40%] h-[50%]"
