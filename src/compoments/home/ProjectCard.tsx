@@ -5,9 +5,10 @@ interface ProjectCardProp {
   name: string;
   link: string;
   image: string;
+  date: string;
 }
 
-export function ProjectCard({ name, link, image }: ProjectCardProp) {
+export function ProjectCard({ name, link, image, date }: ProjectCardProp) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -38,15 +39,17 @@ export function ProjectCard({ name, link, image }: ProjectCardProp) {
           {/* 이미지 배경 */}
           <div
             className={`absolute inset-0 bg-black bg-cover bg-center transition-transform duration-300 ${
-              isHovered ? "transform scale-110" : "transform scale-100"
+              isHovered ? "scale-110" : "scale-100"
             }`}
             style={{ backgroundImage: `url(${image})` }}
           />
 
-          {/* 이미지 오버레이 */}
+          {/* 블러 효과 추가된 오버레이 */}
           <div
-            className={`absolute inset-0 bg-black bg-opacity-40 transition-opacity duration-300 ${
-              isHovered ? "opacity-60" : "opacity-30"
+            className={`absolute inset-0 bg-black bg-opacity-40 transition-all duration-300 ${
+              isHovered
+                ? "opacity-60 backdrop-blur-lg"
+                : "opacity-30 backdrop-blur-none"
             }`}
           />
 
@@ -66,7 +69,12 @@ export function ProjectCard({ name, link, image }: ProjectCardProp) {
                 isHovered ? "-translate-y-2" : "translate-y-0"
               }`}
             >
-              <h3 className="text-white text-xl font-bold mb-2">{name}</h3>
+              <p
+                className="text-white text-xl font-bold mb-2"
+                style={{ textShadow: "4px 4px 10px rgba(0, 0, 0, 1)" }}
+              >
+                {name}
+              </p>
 
               <div
                 className={`text-gray-300 text-sm transition-opacity duration-300 ${
@@ -75,7 +83,12 @@ export function ProjectCard({ name, link, image }: ProjectCardProp) {
                     : "opacity-0 translate-y-5"
                 }`}
               >
-                View Project
+                <p>{date}</p>
+                <img
+                  src="/images/tools/figma.png"
+                  className="w-10 h-10 mx-auto mt-4 "
+                />
+                <p className="pt-4">View Project</p>
               </div>
             </div>
           </div>

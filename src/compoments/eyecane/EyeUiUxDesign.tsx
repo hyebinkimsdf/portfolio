@@ -39,7 +39,7 @@ const Image: React.FC<ImageProps> = ({ src, alt, className = "" }) => (
 
 export function EyeUiUxDesign() {
   return (
-    <div className="w-full max-w-[1128px] mx-auto px-4 md:px-6 lg:px-0">
+    <div className="w-full max-w-[1128px] mx-auto px-4 md:px-6 lg:px-0 pt-10">
       {/* User Flow Section */}
       <FadeInSection className="w-full flex flex-col justify-center mb-20 md:mb-40 pb-6 md:pb-10">
         <p className="w-full text-center mb-6 md:mb-10 text-base md:text-lg font-medium">

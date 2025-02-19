@@ -7,15 +7,36 @@ export function ProjectList() {
 
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-center gap-8">
-          <ProjectCard name={"Naver고객센터"} link={"/naver"} image={""} />
-          <ProjectCard name={"Eyecane"} link={"/eyecane"} image={""} />
+          <ProjectCard
+            name={"Naver고객센터"}
+            link={"/naver"}
+            image={""}
+            date={""}
+          />
+          <ProjectCard
+            name={"Eyecane"}
+            link={"/eyecane"}
+            image={"/images/eyecane/designsystem-main.png"}
+            date={"2024.01 ~ 2024.12"}
+          />
           <ProjectCard
             name={"드론 데이터 시각화 웹사이트"}
             link={"/dronGo"}
             image={""}
+            date={""}
           />
-          <ProjectCard name={"수영복 아커머스"} link={"/swim360"} image={""} />
-          <ProjectCard name={"아이돌 팬사이트"} link={"/idolfan"} image={""} />
+          <ProjectCard
+            name={"수영복 아커머스"}
+            link={"/swim360"}
+            image={""}
+            date={""}
+          />
+          <ProjectCard
+            name={"아이돌 팬사이트"}
+            link={"/idolfan"}
+            image={""}
+            date={""}
+          />
         </div>
       </div>
     </div>

@@ -124,7 +124,7 @@ export function EyeBackground(): React.ReactElement {
       {/* Overview Section */}
       <div
         id="overview-section"
-        className={`w-full flex flex-col justify-center mb-20 border-b-gray-500 border-b-[1px] pb-10 animate-element transition-all duration-700 ${
+        className={`w-full flex flex-col justify-center mb-20 pb-10 animate-element transition-all duration-700 ${
           isSectionVisible("overview-section")
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-10"
@@ -164,7 +164,7 @@ export function EyeBackground(): React.ReactElement {
       {/* Statistics Section */}
       <div
         id="statistics-section"
-        className={`w-full flex flex-col justify-center mb-20 border-b-gray-500 border-b-[1px] pb-10 animate-element transition-all duration-700 ${
+        className={`w-full flex flex-col justify-center mb-20  pb-10 animate-element transition-all duration-700 ${
           isSectionVisible("statistics-section")
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-10"
