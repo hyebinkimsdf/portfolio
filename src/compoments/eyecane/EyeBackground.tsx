@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { CircleChart } from "../common/CircleChart";
+import AccessibilityStats from "./StatsVisualizer";
+import StatsVisualizer from "./StatsVisualizer";
 
 // Define types for our data structures
 interface Persona {
@@ -59,6 +61,32 @@ export function EyeBackground(): React.ReactElement {
   const isSectionVisible = (sectionId: string): boolean => {
     return Boolean(visible[sectionId]);
   };
+
+  const statisticsData = [
+    {
+      category: "이동 어려움",
+      percentage: 70,
+      description: "보행, 대중교통 이용",
+    },
+    {
+      category: "일상생활 어려움",
+      percentage: 60,
+      description: "독서, 쇼핑, 요리 등",
+    },
+  ];
+
+  const statisticsData2 = [
+    {
+      category: "보조기기에 관심이 있다다",
+      percentage: 90,
+      description: "스마트폰 앱, AR 글래스 등",
+    },
+    {
+      category: "보조기기를 사용하고 있다",
+      percentage: 30,
+      description: "비용, 접근성, 사용 편의성 문제로 기술 활용에 어려움",
+    },
+  ];
 
   // Define persona data
   const personas: Persona[] = [
@@ -142,7 +170,11 @@ export function EyeBackground(): React.ReactElement {
                 : "opacity-0 -translate-x-10"
             }`}
           >
-            <CircleChart />
+            <StatsVisualizer
+              title="시각장애인 생활 어려움 현황"
+              stats={statisticsData}
+              source="한국시각장애인연합회(KFVB, 2020)"
+            />
           </div>
           <div
             className={`text-center md:text-left transition-all duration-700 delay-500 ${
@@ -162,42 +194,37 @@ export function EyeBackground(): React.ReactElement {
       </div>
 
       {/* Statistics Section */}
-      <div
-        id="statistics-section"
-        className={`w-full flex flex-col justify-center mb-20  pb-10 animate-element transition-all duration-700 ${
-          isSectionVisible("statistics-section")
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-10"
-        }`}
-      >
-        <div className="flex flex-col md:flex-row w-full justify-center items-center gap-10">
-          <div
-            className={`text-center md:text-left order-2 md:order-1 transition-all duration-700 delay-300 ${
-              isSectionVisible("statistics-section")
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 -translate-x-10"
-            }`}
-          >
-            <p className="w-full text-center mb-10 text-4xl font-semibold">
-              관심도에 비해 낮은 사용자 수
-            </p>
-            <p className="max-w-[480px] w-full">
-              2021년 시각장애인 기술 활용 실태조사에 따르면, 한국의 시각장애인
-              중 30%만이 보조기기(스마트폰 앱, AR 글래스 등)를 사용하고 있으며,
-              나머지는 비용, 접근성, 사용 편의성 문제로 기술 활용에 어려움을
-              겪고 있습니다.
-            </p>
-            <p className="opacity-50 mt-2">출처: 한국정보화진흥원</p>
-          </div>
-          <div
-            className={`order-1 md:order-2 transition-all duration-700 delay-500 ${
-              isSectionVisible("statistics-section")
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 translate-x-10"
-            }`}
-          >
-            <CircleChart />
-          </div>
+      <div className="flex flex-col md:flex-row w-full justify-center items-center md:items-start gap-10">
+        <div
+          className={`text-center md:text-left order-1 md:order-1 transition-all duration-700 delay-300 ${
+            isSectionVisible("statistics-section")
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 -translate-x-10"
+          }`}
+        >
+          <p className="w-full text-center mb-10 text-4xl font-semibold">
+            관심도에 비해 낮은 사용자 수
+          </p>
+          <p className="max-w-[480px] w-full">
+            2021년 시각장애인 기술 활용 실태조사에 따르면, 한국의 시각장애인 중
+            30%만이 보조기기(스마트폰 앱, AR 글래스 등)를 사용하고 있으며,
+            나머지는 비용, 접근성, 사용 편의성 문제로 기술 활용에 어려움을 겪고
+            있습니다.
+          </p>
+          <p className="opacity-50 mt-2">출처: 한국정보화진흥원</p>
+        </div>
+        <div
+          className={`order-2 md:order-2 pb-24 transition-all duration-700 delay-500 ${
+            isSectionVisible("statistics-section")
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 translate-x-10"
+          }`}
+        >
+          <StatsVisualizer
+            title="시각장애인 기술 활용 실태조사"
+            stats={statisticsData2}
+            source="한국정보화진흥원"
+          />
         </div>
       </div>
 
