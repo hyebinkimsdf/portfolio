@@ -5,7 +5,7 @@ import { EyeUiUxDesign } from "../compoments/eyecane/EyeUiUxDesign";
 
 export default function Eyecane() {
   return (
-    <div className="w-full min-h-screen pt-[10vh] bg-[#1F1F1F] text-white flex flex-col justify-center items-center mx-auto px-4">
+    <div className="w-full min-h-screen pt-[10vh] bg-[#1F1F1F] text-white flex flex-col justify-center items-center mx-auto px-4 pb-20">
       <div className="text-center flex flex-col justify-center items-center mt-20 mb-40">
         <p className="text-[20px] mb-10">2024.01 ~ 2024.12</p>
         <p className="text-[80px] font-bold mb-8">EYECANE</p>

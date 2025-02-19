@@ -55,15 +55,15 @@ export function EyeUiUxDesign() {
       </FadeInSection>
 
       {/* Home Section */}
-      <FadeInSection className="flex flex-col md:flex-row gap-6 md:gap-4 Home mb-20 text-center md:text-left">
+      <FadeInSection className="flex flex-col-reverse md:flex-row gap-8 Home mb-20 text-center md:text-left">
         <div className="w-full md:w-auto flex justify-center">
           <Image
             src="/images/eyecane/case.png"
             alt="eyecane home case 화면"
-            className="w-full max-w-[400px] md:max-w-none object-contain hover:shadow-xl transition-shadow duration-300"
+            className="w-full max-w-[70%] object-contain hover:shadow-xl transition-shadow duration-300"
           />
         </div>
-        <div className="flex flex-col gap-4 md:flex-1">
+        <div className="flex flex-col gap-4 md:flex-1 min-w-[30%]">
           <motion.p
             className="text-lg md:text-xl"
             initial={{ opacity: 0 }}
