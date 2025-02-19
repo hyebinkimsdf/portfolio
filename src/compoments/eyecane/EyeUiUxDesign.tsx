@@ -246,7 +246,7 @@ export function EyeUiUxDesign() {
       </FadeInSection>
 
       {/* Scotoma Section */}
-      <FadeInSection className="flex flex-col justify-center text-center items-center mt-40">
+      <FadeInSection className="flex flex-col justify-start text-center items-center mt-40">
         <motion.p
           className="text-lg md:text-xl"
           initial={{ opacity: 0 }}
@@ -275,7 +275,7 @@ export function EyeUiUxDesign() {
           있습니다.
         </motion.p>
 
-        <div className="w-full flex flex-wrap mx-auto justify-center gap-10 mt-20 items-stretch">
+        <div className="w-full flex flex-wrap mx-auto justify-center gap-10 mt-20 items-start">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -307,7 +307,7 @@ export function EyeUiUxDesign() {
           </motion.div>
         </div>
 
-        <div className="w-full flex flex-wrap mx-auto justify-center gap-10 mt-20 items-stretch">
+        <div className="w-full flex flex-wrap mx-auto justify-center gap-10 mt-20 items-start">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
