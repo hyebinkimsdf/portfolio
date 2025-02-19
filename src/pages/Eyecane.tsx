@@ -25,14 +25,6 @@ export default function Eyecane() {
       <EyeBackground />
       <EyeDesignSystem />
       <EyeUiUxDesign />
-      {/* Tab 컴포넌트에 JSX 요소 전달 */}
-      {/* 
-      <Tab
-        background={<EyeBackground />}
-        designSystem={<EyeDesignSystem />}
-        design={undefined}
-      />
-      */}
     </div>
   );
 }

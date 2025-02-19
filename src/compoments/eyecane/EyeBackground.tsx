@@ -218,7 +218,7 @@ export function EyeBackground(): React.ReactElement {
           {personas.map((persona, index) => (
             <div
               key={persona.desc}
-              className={`w-full min-h-[400px] border-gray-500 border rounded-xl flex flex-col items-center justify-center px-6 py-8 gap-4 shadow-md transition-all duration-700 delay-${
+              className={`w-full min-h-[450px] border-gray-500 border rounded-xl flex flex-col items-center justify-center px-6 py-8 gap-4 shadow-md transition-all duration-700 delay-${
                 index * 200 + 300
               } ${
                 isSectionVisible("persona-section")
