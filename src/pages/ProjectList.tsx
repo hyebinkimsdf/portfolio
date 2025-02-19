@@ -21,7 +21,7 @@ export function ProjectList() {
           />
           <ProjectCard
             name={"드론 데이터 시각화 웹사이트"}
-            link={"/dronGo"}
+            link={"/droneGo"}
             image={""}
             date={""}
           />
