@@ -1,3 +1,4 @@
+import { Nav } from "../compoments/common/Nav";
 import { Tab } from "../compoments/common/Tab";
 import { EyeBackground } from "../compoments/eyecane/EyeBackground";
 import { EyeDesignSystem } from "../compoments/eyecane/EyeDesignSystem";
@@ -22,9 +23,24 @@ export default function Eyecane() {
           className="max-w-[900px] w-[70%]"
         />
       </div>
-      <EyeBackground />
-      <EyeDesignSystem />
-      <EyeUiUxDesign />
+      <div id="Back">
+        <EyeBackground />
+      </div>
+      <div id="System">
+        <EyeDesignSystem />
+      </div>
+      <div id="UiUx">
+        <EyeUiUxDesign />
+      </div>
+      <Nav />
+      {/* Tab 컴포넌트에 JSX 요소 전달 */}
+      {/* 
+      <Tab
+        background={<EyeBackground />}
+        designSystem={<EyeDesignSystem />}
+        design={undefined}
+      />
+      */}
     </div>
   );
 }
