@@ -13,7 +13,7 @@ export function CircleChart({ part01, part02 }: CircleChartProp) {
     labels: ["Blue", "Yellow"],
     datasets: [
       {
-        data: [part01, part02], // ✅ props 값 적용
+        data: [part01, part02],
         backgroundColor: ["#36A2EB", "#FFCE56"],
         hoverBackgroundColor: ["#36A2EB", "#FFCE56"],
       },

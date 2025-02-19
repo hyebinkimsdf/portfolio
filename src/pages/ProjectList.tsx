@@ -8,7 +8,7 @@ export function ProjectList() {
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-center gap-8">
           <ProjectCard
-            name={"Naver고객센터"}
+            name={"Naver 디지털 ARS"}
             link={"/naver"}
             image={""}
             date={""}
