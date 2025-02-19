@@ -69,7 +69,7 @@ export function Naver() {
           >
             <div className="flex flex-col items-center md:items-start text-center md:text-start">
               <p className="text-sm mb-4 font-bold text-slate-500 opacity-50">
-                2024.01 ~ 2024.12
+                2024.06 ~ 2024.9
               </p>
               <p className="text-[18px] font-semibold">주요 업무: UI/UX 개선</p>
               <br />

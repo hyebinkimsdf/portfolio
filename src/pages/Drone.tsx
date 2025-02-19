@@ -8,13 +8,6 @@ export function Drone() {
         <p className="text-[14px] mb-10 text">
           드론 행동 데이터를 차트와 맵을 활용한 시각화 디자인을 기획하고, <br />
           3D 몰입형 스크롤을 적용하여 입체감 있는 경험을 구현했습니다. <br />
-          <br />
-          협업 기업의 의도를 반영하며 고려한 UI를 설계하고,
-          <br /> Figma 기반의 UI 컴포넌트를 제작 및 관리하였습니다.
-          <br />
-          <br />
-          React Three Fiber, GSAP, Blender를 활용하여 드론 행동 데이터를 3D로
-          시각화하였으며, 해당 프로젝트는 오름 캠프 최우수상을 수상하였습니다.
         </p>
 
         <div className="gap-4 flex flex-col md:flex-row justify-center items-center w-full">
@@ -28,12 +21,19 @@ export function Drone() {
 
           <div className="flex flex-col items-center md:items-start text-center md:text-start">
             <p className="text-sm mb-4 font-bold text-slate-500 opacity-50">
-              2024.01 ~ 2024.12
+              2025.01 ~ 2025.02
             </p>
-            <p className="text-[18px] font-semibold">주요 업무: UI/UX 개선</p>
+            <p className="text-[18px] font-semibold">
+              주요 업무:UI/UX 컨셉 및 디자인 리드
+            </p>
             <br />
             <ul className="list-disc px-5 text-start">
-              <li>업체의 피드백에 따른 디자인, 아이콘 수정 작업</li>
+              <li>UI/UX 컨셉 기획 및 디자인 리드</li>
+              <ul>
+                <li>- 협업 기업의 의도와 디자인 일치도 확보</li>
+                <li>- 드론 데이터를 이해하고 차트, 맵으로 시각화 디자인</li>
+                <li>- 피그마를 활용한 UI 컴포넌트 제작 및 관리</li>
+              </ul>
               <li>직관성 향상 목적 UX writing 제안 및 참여</li>
               <li>아이콘 svg 포맷으로 통일화</li>
             </ul>
