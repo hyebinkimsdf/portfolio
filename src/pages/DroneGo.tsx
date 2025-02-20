@@ -1,6 +1,7 @@
 import { Nav } from "../compoments/common/Nav";
 import Drone from "../compoments/drone/Drone";
 import { DroneBackground } from "../compoments/drone/DroneBackground";
+import { DroneDesignSystem } from "../compoments/drone/DroneDesignSystem";
 
 export function DroneGo() {
   return (
@@ -60,6 +61,10 @@ export function DroneGo() {
       </div>
       <div id="Back" className="mt-10">
         <DroneBackground />
+      </div>
+
+      <div id="System" className="mt-10">
+        <DroneDesignSystem />
       </div>
 
       <div
