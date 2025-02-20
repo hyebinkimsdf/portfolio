@@ -1,7 +1,7 @@
 export function Drone() {
   return (
     <div className="w-full min-h-screen pt-10 bg-[#F5F5F5] text-[#3B3838] flex flex-col justify-center items-center mx-auto px-4 pb-10">
-      <div className="text-center w-full flex flex-col justify-center items-center mt-20 pb-20 border-b-gray-500 border-b-[1px]">
+      <div className="text-center w-full flex flex-col justify-center items-center mt-20 pb-20 max-w-[1440px] border-b-gray-500 border-b-[1px]">
         <p className="text-[40px] md:text-[60px] font-bold mb-4 text-[#342DC2]">
           드론 데이터 시각화 Web
         </p>
@@ -15,11 +15,11 @@ export function Drone() {
             <img
               src="/images/droneGo/desktopMockUp.png"
               className=" w-[100%]"
-              alt="naver 히어로 섹션 이미지"
+              alt="드론 예시 이미지"
             />
           </div>
 
-          <div className="flex flex-col items-center md:items-start text-center md:text-start">
+          <div className="flex flex-col  items-center md:items-start text-center md:text-start">
             <p className="text-sm mb-4 font-bold text-slate-500 opacity-50">
               2025.01 ~ 2025.02
             </p>
@@ -29,13 +29,16 @@ export function Drone() {
             <br />
             <ul className="list-disc px-5 text-start">
               <li>UI/UX 컨셉 기획 및 디자인 리드</li>
+              <li>드론 데이터를 이해하고 차트, 맵으로 시각화 디자인</li>
+              <li>데이터 시각화 디자인에 협업 기업의 의도와 일치도 확보</li>
+              <li>3D 몰입형 스크롤</li>
               <ul>
-                <li>- 협업 기업의 의도와 디자인 일치도 확보</li>
-                <li>- 드론 데이터를 이해하고 차트, 맵으로 시각화 디자인</li>
-                <li>- 피그마를 활용한 UI 컴포넌트 제작 및 관리</li>
+                <li>
+                  - React Three Fiber, GSAP, Blender를 이용하여 사이트의 입체감
+                  높임
+                </li>
               </ul>
-              <li>직관성 향상 목적 UX writing 제안 및 참여</li>
-              <li>아이콘 svg 포맷으로 통일화</li>
+              <li>드론 행동 데이터 3D 시각화</li>
             </ul>
 
             <div className="flex flex-col gap-4 mt-4 justify-center items-center md:items-start">
@@ -57,39 +60,9 @@ export function Drone() {
         <p>네이버 플레이스</p>
         <div className="flex flex-wrap justify-center gap-4 my-20">
           <img
-            src="/images/naver/naver01.png"
-            className="max-w-[250px] w-[40%] h-[50%]"
-          />
-          <img
-            src="/images/naver/naver02.png"
-            className="max-w-[250px]  w-[40%] h-[50%]"
-          />
-          <img
-            src="/images/naver/naver03.png"
-            className="max-w-[250px]  w-[40%] h-[50%]"
-          />
-        </div>
-        <p>네이버 고객센터</p>
-        <div className="flex flex-wrap justify-center gap-4 mt-20 text-center font-bold text-lg ">
-          <img
-            src="/images/naver/naver04.png"
-            className="max-w-[250px]  w-[40%] h-[50%]"
-          />
-          <img
-            src="/images/naver/naver05.png"
-            className="max-w-[250px]  w-[40%] h-[50%]"
-          />
-          <img
-            src="/images/naver/naver06.png"
-            className="max-w-[250px]  w-[40%] h-[50%]"
-          />
-          <img
-            src="/images/naver/naver07.png"
-            className="max-w-[250px]  w-[40%] h-[50%]"
-          />
-          <img
-            src="/images/naver/naver08.png"
-            className="max-w-[250px]  w-[40%] h-[50%]"
+            src="/images/droneGo/home.png"
+            alt="droneGo home화면"
+            className="] w-[50%]  h-[50%]"
           />
         </div>
       </div>
