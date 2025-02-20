@@ -8,6 +8,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@react-three/fiber": "^9.0.2",
     "chart.js": "^4.4.7",
     "framer-motion": "^12.4.2",
     "gsap": "^3.12.7",
@@ -17,6 +18,7 @@
     "react-router-dom": "^7.1.5",
     "react-scroll": "^1.9.2",
     "recharts": "^2.15.1",
+    "three": "^0.173.0",
     "typescript": "^5.7.3"
   },
   "devDependencies": {
@@ -24,6 +26,7 @@
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "@types/react-scroll": "^1.8.10",
+    "@types/three": "^0.173.0",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.17",
     "postcss": "^8.4.35",
