@@ -5,7 +5,6 @@ import { DroneBackground } from "../compoments/drone/DroneBackground";
 export function DroneGo() {
   return (
     <div className="w-full min-h-screen pt-10 bg-[#F5F5F5] text-[#3B3838] flex flex-col justify-center items-center mx-auto px-4 pb-10">
-      <Nav textColor={"black"} lineColor={"bg-black"} />
       <div className="text-center w-full flex flex-col justify-center items-center mt-20 pb-20 max-w-[1440px] border-b-gray-500 border-b-[1px]">
         <p className="text-[40px] md:text-[60px] font-bold mb-4 text-[#342DC2]">
           드론 데이터 시각화 Web
@@ -68,16 +67,16 @@ export function DroneGo() {
         id="UiUx"
       >
         {/*home 화면*/}
-        <div className="flex flex-wrap justify-center gap-4 my-20">
+        <div className="flex flex-wrap justify-center gap-8 my-20">
           <video
-            className="w-full max-w-[50%] min-w-[500px] rounded-lg "
+            className="w-full md:w-[50%] min-w-[500px] rounded-lg "
             src="/videos/drone/home.mp4"
             autoPlay
             loop
             muted
           />
           {/*home 화면 설명*/}
-          <div className="w-[500px] flex flex-col text-start gap-2">
+          <div className="w-full md:w-[500px] flex flex-col text-start gap-2">
             <p className="text-zinc-400 font-extralight text-xs mb-2 ">
               UI/UX Design
             </p>
@@ -91,14 +90,14 @@ export function DroneGo() {
         </div>
 
         {/*droneList Unlog 화면*/}
-        <div className="flex flex-wrap justify-center gap-4 my-20">
+        <div className="flex flex-wrap justify-center gap-8  my-20">
           <img
-            className="w-full max-w-[50%] min-w-[500px] rounded-lg "
+            className="w-full md:w-[50%] min-w-[500px] rounded-lg "
             src="/images/droneGo/logOut.png"
             alt="DroneGo 로그인 화면"
           />
           {/*droneList  화면 설명*/}
-          <div className="w-[500px] flex flex-col text-start gap-2">
+          <div className="w-full md:w-[500px] flex flex-col text-start gap-2">
             <p className="text-zinc-400 font-extralight text-xs mb-2 ">
               UI/UX Design
             </p>
@@ -113,16 +112,16 @@ export function DroneGo() {
         </div>
 
         {/*droneList 화면*/}
-        <div className="flex flex-wrap justify-center gap-4 my-20">
+        <div className="flex flex-wrap justify-center gap-8  my-20">
           <video
-            className="w-full max-w-[50%] min-w-[500px] rounded-lg shadow-md "
+            className="w-full md:w-[50%] rounded-lg shadow-md "
             src="/videos/drone/droneList2.mp4"
             autoPlay
             loop
             muted
           />
           {/*droneList 화면 설명*/}
-          <div className="w-[500px] flex flex-col text-start gap-2">
+          <div className="w-full md:w-[500px] flex flex-col text-start gap-2">
             <p className="text-zinc-400 font-extralight text-xs mb-2 ">
               UI/UX Design
             </p>
@@ -136,14 +135,14 @@ export function DroneGo() {
         </div>
 
         {/*droneList 화면*/}
-        <div className="flex flex-wrap justify-center gap-4 my-20 ">
+        <div className="flex flex-wrap justify-center gap-8  my-20 ">
           <img
-            className="w-full max-w-[50%] min-w-[500px] rounded-lg shadow-md "
+            className="w-full md:w-[50%] rounded-lg shadow-md "
             src="/images/droneGo/chart.png"
             alt="DroneGo 차트 화면"
           />
           {/*droneList 화면 설명*/}
-          <div className="w-[500px] flex flex-col text-start gap-2">
+          <div className="w-full md:w-[500px] flex flex-col text-start gap-2">
             <p className="text-zinc-400 font-extralight text-xs mb-2 ">
               UI/UX Design
             </p>
@@ -169,14 +168,14 @@ export function DroneGo() {
         </div>
 
         {/*droneList 화면*/}
-        <div className="flex flex-wrap justify-center gap-4 my-20">
+        <div className="flex flex-wrap justify-center gap-8 my-20">
           <img
-            className="w-full max-w-[50%] min-w-[500px] rounded-lg shadow-md "
+            className="w-full md:w-[50%] rounded-lg shadow-md "
             src="/images/droneGo/map2d.png"
             alt="DroneGo 차트 화면"
           />
           {/*droneList 화면 설명*/}
-          <div className="w-[500px] flex flex-col text-start gap-2">
+          <div className="w-full md:w-[500px] flex flex-col text-start gap-2">
             <p className="text-zinc-400 font-extralight text-xs mb-2 ">
               UI/UX Design
             </p>
@@ -191,6 +190,7 @@ export function DroneGo() {
           </div>
         </div>
       </div>
+      <Nav textColor={"black"} lineColor={"bg-black"} />
     </div>
   );
 }

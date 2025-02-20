@@ -101,8 +101,8 @@ export function DroneBackground(): React.ReactElement {
     },
     {
       img: "/images/droneGo/person_pro2.png",
-      alt: "페르소나 김재호호 프로필",
-      desc: "김재호 / 24세 / 드론 운영 관리자",
+      alt: "페르소나 김재호 프로필",
+      desc: "김재호 / 42세 / 드론 운영 관리자",
       quote: "비행 경로를 쉽게 확인하고 효율성 평가가 필요해요.",
       painpoints: [
         "비행 기록이 복잡하게 나열되어 있어 데이터를 한눈에 파악하기 어려움.",
