@@ -194,7 +194,10 @@ export function EyeBackground(): React.ReactElement {
       </div>
 
       {/* Statistics Section */}
-      <div className="flex flex-col md:flex-row w-full justify-center items-center md:items-start gap-10">
+      <div
+        id="statistics-section"
+        className="flex flex-col md:flex-row w-full justify-center items-center md:items-start gap-10 animate-element"
+      >
         <div
           className={`text-center md:text-left order-1 md:order-1 transition-all duration-700 delay-300 ${
             isSectionVisible("statistics-section")
