@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-import StatsVisualizer from "../eyecane/StatsVisualizer";
-
 // Define types for our data structures
 interface Persona {
   img: string;
@@ -14,6 +12,7 @@ interface Persona {
 interface UxGoalItem {
   icon: string;
   title: string;
+  body: string;
 }
 
 interface ChallengeItem {
@@ -90,59 +89,56 @@ export function DroneBackground(): React.ReactElement {
   // Define persona data
   const personas: Persona[] = [
     {
-      img: "/images/eyecane/person_minsu.png",
+      img: "/images/droneGo/person_pro.png",
       alt: "페르소나 민수 프로필",
-      desc: "황반변성 | 강민수 / 56세 / 편의점 점주님",
-      quote: "작은 글씨와 어두운 환경이 가장 불편해요",
+      desc: "이준호 / 29세 / 드론 개발자",
+      quote: "비행 성능을 분석하고 문제를 빠르게 찾고 싶어요.",
       painpoints: [
-        "상품의 가격표나 유통기한을 확인하는 데 어려움이 있음.",
-        "낮과 밤의 밝기 변화에 시야가 쉽게 적응하지 못함.",
-        "앱이 복잡하면 조작하기 더 어렵다.",
+        "비행 성능 데이터를 제대로 시각화할 수 있는 도구가 부족함.",
+        "성능 데이터를 분석하는 데 필요한 정보를 손쉽게 얻기 어려움.",
+        "데이터를 바탕으로 시스템 개선점을 빠르게 파악하기 힘듦.",
       ],
     },
     {
-      img: "/images/eyecane/person_jimin.png",
+      img: "/images/droneGo/person_pro2.png",
       alt: "페르소나 최지민 프로필",
-      desc: "선천적 망막색소변성증 | 최지민 / 22세 / 대학생",
-      quote: "길을 찾는 것도, 사람을 알아보는 것도 쉽지 않다.",
+      desc: "김재호 / 24세 / 드론 운영 관리자",
+      quote: "비행 경로를 쉽게 확인하고 효율성 평가가 필요해요.",
       painpoints: [
-        "강의실을 찾을 때 주변 표지판을 읽기 어렵다.",
-        "어두운 곳에서는 시야가 급격히 좁아져 계단이나 장애물을 인식하는 데 어려움을 겪는다.",
+        "비행 기록이 복잡하게 나열되어 있어 데이터를 한눈에 파악하기 어려움.",
+        "비행 기록이 너무 많아 필요한 정보만 빠르게 추출하기 힘듦.",
       ],
     },
   ];
 
   // Define UX goal items
   const uxGoalItems: UxGoalItem[] = [
-    { icon: "what", title: "What" },
-    { icon: "who", title: "Who" },
-    { icon: "when", title: "When" },
-    { icon: "location", title: "Where" },
+    {
+      icon: "what",
+      title: "What",
+      body: "드론 데이터 시각화 및 분석",
+    },
+    {
+      icon: "who",
+      title: "Who",
+      body: "드론 조종사, 분석가, 이동 경로를 확인하려는 사용자",
+    },
+    { icon: "when", title: "When", body: "드론 비행 후 데이터 리뷰" },
+    {
+      icon: "location",
+      title: "Where",
+      body: "웹 기반 플랫폼으로 어디서나 접근 가능",
+    },
   ];
 
   // Define challenge items
   const challengeItems: ChallengeItem[] = [
     {
-      challenge: "정보 인식 문제",
-      description:
-        "장애물, 장애적 요소로 인한 시야 가림으로 시야 인식이 어려움",
-      solution: "시야 커스텀",
+      challenge: "데이터 과부화",
+      description: "데이터가 직관적이지 않으면 사용자에게 과부하.",
+      solution: "친화적 시각화",
       solutionDesc:
-        "안보이는 부분을 시야를 이동, 확대하고 필터로 상황에 맞게 대비, 색상을 조절하여 커스텀할 수 있음",
-    },
-    {
-      challenge: "사용자 피로도",
-      description: "작은 글씨와 낮은 대비 색상 사용으로 가독성 문제 발생",
-      solution: "인지, 사용 부담 감소",
-      solutionDesc:
-        "최적화된 컬러 대비 및 폰트 적용 깔끔한 가로형 큰 버튼 사용",
-    },
-    {
-      challenge: "사용자 학습 부담",
-      description:
-        "복잡한 UI로 인해 신규 사용자의 평균 적응 시간이 많이 소요됨",
-      solution: "직관적 UI로 적응 시간 단축",
-      solutionDesc: "가이드가 명확한 UI 적용 시 평균 적응 시간 단축",
+        "인터페이스 단순화 및 필터링, 다양한 시각화(차트, 맵) 요소 추가",
     },
   ];
 
@@ -159,7 +155,7 @@ export function DroneBackground(): React.ReactElement {
       >
         <p className="w-full text-center mb-10 text-lg ">Overview</p>
         <p className="w-full text-center mb-10 text-4xl font-semibold">
-          저시력자들은 일상에서 정말 많은 어려움을 겪고 있을까?
+          드론 데이터 분석의 주요 문제점이 뭘까?
         </p>
         <div className="flex flex-col md:flex-row w-full justify-center items-center gap-10">
           <div
@@ -169,64 +165,22 @@ export function DroneBackground(): React.ReactElement {
                 : "opacity-0 -translate-x-10"
             }`}
           >
-            <StatsVisualizer
-              title="시각장애인 생활 어려움 현황"
-              stats={statisticsData}
-              source="한국시각장애인연합회(KFVB, 2020)"
-            />
-          </div>
-          <div
-            className={`text-center md:text-left transition-all duration-700 delay-500 ${
-              isSectionVisible("overview-section")
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 translate-x-10"
-            }`}
-          >
-            <p className="max-w-[480px] w-full">
-              한국시각장애인연합회(KFVB, 2020) 조사에 따르면, 저시력자의 약
-              70%가 이동(보행, 대중교통 이용)에 어려움을 겪고 있으며, 60%는
-              독립적인 일상생활(독서, 쇼핑, 요리 등)에 어려움을 호소했습니다.
+            <p>
+              데이터 양의 과부하: 드론은 하루에 수백 기가바이트의 데이터를
+              생성할 수 있습니다. (출처: DroneDeploy, 2021)
             </p>
-            <p className="opacity-50 mt-2">출처: 한국시각장애인연합회 보고서</p>
+            <br />
+            <p>
+              데이터 처리 시간: 드론 데이터 처리에 소요되는 시간은 데이터 양과
+              분석 도구에 따라 크게 달라질 수 있습니다. (출처: PwC, 2020)
+            </p>
+            <br />
+            <p>
+              사용자 친화적인 인터페이스: 드론 데이터 분석 도구의 60% 이상이
+              사용자 친화적인 인터페이스를 제공하지 못해 사용자들이 어려움을
+              겪고 있습니다. (출처: DroneAnalyst, 2021)
+            </p>
           </div>
-        </div>
-      </div>
-
-      {/* Statistics Section */}
-      <div
-        id="statistics-section"
-        className="flex flex-col md:flex-row w-full justify-center items-center md:items-start gap-10 animate-element"
-      >
-        <div
-          className={`text-center md:text-left order-1 md:order-1 transition-all duration-700 delay-300 ${
-            isSectionVisible("statistics-section")
-              ? "opacity-100 translate-x-0"
-              : "opacity-0 -translate-x-10"
-          }`}
-        >
-          <p className="w-full text-center mb-10 text-4xl font-semibold">
-            관심도에 비해 낮은 사용자 수
-          </p>
-          <p className="max-w-[480px] w-full">
-            2021년 시각장애인 기술 활용 실태조사에 따르면, 한국의 시각장애인 중
-            30%만이 보조기기(스마트폰 앱, AR 글래스 등)를 사용하고 있으며,
-            나머지는 비용, 접근성, 사용 편의성 문제로 기술 활용에 어려움을 겪고
-            있습니다.
-          </p>
-          <p className="opacity-50 mt-2">출처: 한국정보화진흥원</p>
-        </div>
-        <div
-          className={`order-2 md:order-2 pb-24 transition-all duration-700 delay-500 ${
-            isSectionVisible("statistics-section")
-              ? "opacity-100 translate-x-0"
-              : "opacity-0 translate-x-10"
-          }`}
-        >
-          <StatsVisualizer
-            title="시각장애인 기술 활용 실태조사"
-            stats={statisticsData2}
-            source="한국정보화진흥원"
-          />
         </div>
       </div>
 
@@ -256,7 +210,7 @@ export function DroneBackground(): React.ReactElement {
               }`}
             >
               <img
-                className="max-w-[150px] max-h-[150px] transform transition-transform duration-500 hover:scale-105"
+                className="max-w-[150px] rounded-full max-h-[150px] transform transition-transform duration-500 hover:scale-105"
                 src={persona.img}
                 alt={persona.alt}
                 onError={(e) => {
@@ -329,10 +283,7 @@ export function DroneBackground(): React.ReactElement {
                 }}
               />
               <p className="text-lg font-semibold">{item.title}</p>
-              <p className="px-4 text-sm">
-                저시력자가 일상생활에서 겪는 정보 접근성과 이동의 어려움을
-                해결하는 AR 글라스 연동 앱
-              </p>
+              <p className="px-4 text-sm">{item.body}</p>
             </div>
           ))}
         </div>
