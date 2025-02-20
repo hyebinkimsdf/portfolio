@@ -90,7 +90,7 @@ export function DroneBackground(): React.ReactElement {
   const personas: Persona[] = [
     {
       img: "/images/droneGo/person_pro.png",
-      alt: "페르소나 민수 프로필",
+      alt: "페르소나 이준호 프로필",
       desc: "이준호 / 29세 / 드론 개발자",
       quote: "비행 성능을 분석하고 문제를 빠르게 찾고 싶어요.",
       painpoints: [
@@ -101,7 +101,7 @@ export function DroneBackground(): React.ReactElement {
     },
     {
       img: "/images/droneGo/person_pro2.png",
-      alt: "페르소나 최지민 프로필",
+      alt: "페르소나 김재호호 프로필",
       desc: "김재호 / 24세 / 드론 운영 관리자",
       quote: "비행 경로를 쉽게 확인하고 효율성 평가가 필요해요.",
       painpoints: [
@@ -165,21 +165,37 @@ export function DroneBackground(): React.ReactElement {
                 : "opacity-0 -translate-x-10"
             }`}
           >
-            <p>
-              데이터 양의 과부하: 드론은 하루에 수백 기가바이트의 데이터를
-              생성할 수 있습니다. (출처: DroneDeploy, 2021)
-            </p>
+            <div className="bg-[#36373C] text-center text-white rounded-md py-6 px-4">
+              <p className="font-semibold text-lg">데이터 양의 과부하</p> <br />
+              <p>
+                드론은 하루에 수백 기가바이트의 데이터를 생성할 수 있습니다.
+              </p>
+              <p className="opacity-50 text-sm font-thin">
+                출처: DroneDeploy, 2021
+              </p>
+            </div>
             <br />
-            <p>
-              데이터 처리 시간: 드론 데이터 처리에 소요되는 시간은 데이터 양과
-              분석 도구에 따라 크게 달라질 수 있습니다. (출처: PwC, 2020)
-            </p>
+            <div className="bg-[#36373C] text-center text-white rounded-md py-6 px-4">
+              <p className="font-semibold text-lg">데이터 처리 시간</p>
+              <br />
+              드론 데이터 처리에 소요되는 시간은 데이터 양과 분석 도구에 따라
+              크게 달라질 수 있습니다.
+              <p className="opacity-50 text-sm font-thin">출처: PwC, 2020</p>
+            </div>
             <br />
-            <p>
-              사용자 친화적인 인터페이스: 드론 데이터 분석 도구의 60% 이상이
-              사용자 친화적인 인터페이스를 제공하지 못해 사용자들이 어려움을
-              겪고 있습니다. (출처: DroneAnalyst, 2021)
-            </p>
+            <div className="bg-[#36373C] text-center text-white rounded-md py-6 px-4 font-light">
+              <p className="font-semibold text-lg">
+                사용자 친화적인 인터페이스
+              </p>
+              <br />
+              <p>
+                드론 데이터 분석 도구의 60% 이상이 사용자 친화적인 인터페이스를
+                제공하지 못해 사용자들이 어려움을 겪고 있습니다.
+              </p>
+              <p className="opacity-50 text-sm font-thin">
+                출처: DroneAnalyst, 2021
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -370,7 +386,7 @@ export function DroneBackground(): React.ReactElement {
         >
           <img
             className="bg-[#595B6A] px-2 py-2 rounded-xl transition-transform duration-500 hover:scale-102"
-            src="images/eyecane/ServiceFlow.png"
+            src="images/droneGo/UserFlow.png"
             alt="서비스플로우 이미지"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
