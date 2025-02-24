@@ -153,7 +153,7 @@ export function DroneBackground(): React.ReactElement {
             : "opacity-0 translate-y-10"
         }`}
       >
-        <p className="w-full text-center mb-10 text-lg ">Overview</p>
+        <p className="w-full text-center mb-10 text-lg font-bold ">Overview</p>
         <p className="w-full text-center mb-10 text-4xl font-semibold">
           드론 데이터 분석의 주요 문제점이 뭘까?
         </p>
@@ -165,7 +165,7 @@ export function DroneBackground(): React.ReactElement {
                 : "opacity-0 -translate-x-10"
             }`}
           >
-            <div className="bg-[#36373C] text-center text-white rounded-md py-6 px-4">
+            <div className="bg-white text-center text-black shadow-md rounded-md py-6 px-4">
               <p className="font-semibold text-lg">데이터 양의 과부하</p> <br />
               <p>
                 드론은 하루에 수백 기가바이트의 데이터를 생성할 수 있습니다.
@@ -175,7 +175,7 @@ export function DroneBackground(): React.ReactElement {
               </p>
             </div>
             <br />
-            <div className="bg-[#36373C] text-center text-white rounded-md py-6 px-4">
+            <div className="bg-white text-center text-black shadow-md rounded-md py-6 px-4">
               <p className="font-semibold text-lg">데이터 처리 시간</p>
               <br />
               드론 데이터 처리에 소요되는 시간은 데이터 양과 분석 도구에 따라
@@ -183,7 +183,7 @@ export function DroneBackground(): React.ReactElement {
               <p className="opacity-50 text-sm font-thin">출처: PwC, 2020</p>
             </div>
             <br />
-            <div className="bg-[#36373C] text-center text-white rounded-md py-6 px-4 font-light">
+            <div className="bg-white text-center text-black shadow-md rounded-md py-6 px-4 font-light">
               <p className="font-semibold text-lg">
                 사용자 친화적인 인터페이스
               </p>
@@ -209,7 +209,7 @@ export function DroneBackground(): React.ReactElement {
             : "opacity-0 translate-y-10"
         }`}
       >
-        <p className="w-full text-center mb-10 text-lg ">Persona</p>
+        <p className="w-full text-center mb-10 text-lg font-bold">Persona</p>
         <p className="w-full text-center mb-10 text-sm opacity-80">
           퍼소나를 설정하고, 서비스 이용의 니즈를 구체화 하였어요.
         </p>
@@ -272,9 +272,10 @@ export function DroneBackground(): React.ReactElement {
             : "opacity-0 translate-y-10"
         }`}
       >
-        <p className="w-full text-center mb-10 text-lg ">UX Goal</p>
+        <p className="w-full text-center mb-10 text-lg font-bold">UX Goal</p>
         <p className="w-full text-center mb-10 text-sm opacity-80">
-          AR 글라스 앱의 주 사용자의 환경을 구체화하여 목표의 방향을 잡았어요
+          드론 데이터 분석을 주 사용자의 환경을 구체화하여 목표의 방향을
+          잡았어요
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           {uxGoalItems.map((item, index) => (
@@ -314,17 +315,18 @@ export function DroneBackground(): React.ReactElement {
             : "opacity-0 translate-y-10"
         }`}
       >
-        <h2 className="w-full text-center mb-10 text-lg">Project Goal</h2>
+        <h2 className="w-full text-center mb-10 text-lg font-semibold">
+          Project Goal
+        </h2>
         <p className="w-full text-center mb-10 text-sm opacity-80">
           사용자의 고충과 니즈를 충족하여 개선하는 방향으로 목표를 수립하였어요
         </p>
-
         <div className="flex flex-col text-center justify-center items-center gap-6">
           <div className="flex w-full text-center justify-between">
-            <h3 className="mb-4 font-bold text-xl w-full text-center max-w-[480px]">
+            <h3 className="mb-4 font-normal text-xl w-full text-center max-w-[480px]">
               챌린지 분석
             </h3>
-            <h3 className="mb-4 font-bold text-xl w-full max-w-[480px] text-center">
+            <h3 className="mb-4 font-normal text-xl w-full max-w-[480px] text-center">
               이슈 도출
             </h3>
           </div>
@@ -372,7 +374,9 @@ export function DroneBackground(): React.ReactElement {
             : "opacity-0 translate-y-10"
         }`}
       >
-        <h2 className="w-full text-center mb-10 text-lg">Service Flow</h2>
+        <h2 className="w-full text-center mb-10 text-lg font-semibold">
+          Service Flow
+        </h2>
         <p className="w-full text-center mb-10 text-sm opacity-80">
           사용자의 불편함을 최소화하고 직관적인 경험을 제공하기 위해 단계별
           서비스 흐름을 설계하였어요.

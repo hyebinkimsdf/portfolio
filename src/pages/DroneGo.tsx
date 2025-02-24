@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Nav } from "../compoments/common/Nav";
 import Drone from "../compoments/drone/Drone";
 import { DroneBackground } from "../compoments/drone/DroneBackground";
@@ -49,12 +50,23 @@ export function DroneGo() {
             </ul>
 
             <div className="flex flex-col gap-4 mt-4 justify-center items-center md:items-start">
-              <p className="font-semibold">Tools</p>
+              <p className="font-semibold w-full">Tools</p>
               <img
                 src="/images/tools/figma.png"
                 alt="tool"
                 className="w-12 h-12"
               />
+
+              <Link
+                to={"http://drone-go.s3-website.ap-northeast-2.amazonaws.com/"}
+              >
+                <p className="font-semibold w-full">Web</p>
+                <img
+                  src="/images/droneGo/drone.png"
+                  alt="방문버튼"
+                  className="w-12 h-12 rounded-lg"
+                />
+              </Link>
             </div>
           </div>
         </div>
@@ -68,7 +80,7 @@ export function DroneGo() {
       </div>
 
       <div
-        className="w-full flex flex-col text-center font-bold text-lg  mt-20"
+        className="w-full max-w-[1440px] flex flex-col text-center font-bold text-lg  mt-20 border-t-[1px] border-zinc-300"
         id="UiUx"
       >
         {/*home 화면*/}
@@ -152,12 +164,12 @@ export function DroneGo() {
               UI/UX Design
             </p>
             <p className="mb-2">Drone Data List</p>
-            <p className="text-2xl">Interaction Design</p>
+            <p className="text-2xl">Simple Design</p>
             <p className="text-base font-normal mb-5">
-              사이트의 전문성과 세련된 느낌을 브랜딩하기 위해 드론 리스트를
-              호버했을 때 Interation Design을 설계하였습니다. 하지만 프로젝트
-              개발에서 적합한 차트 라이브러리를 찾지 못해 커스텀을 진행하진
-              못했습니다.
+              심플한 디자인으로 세련된 느낌과 복잡한 데이터의 비해 편한 사용감을
+              주기 위해 해당 컨셉의 아이콘과 와이어프레임 UX를 디자인했습니다.
+              하지만 프로젝트 개발에서 적합한 차트 라이브러리를 찾지 못해
+              커스텀을 진행하진 못했습니다.
             </p>
             <p className="text-2xl">Recently</p>
             <p className="text-base font-normal mb-5">
