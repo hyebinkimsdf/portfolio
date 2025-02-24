@@ -16,7 +16,7 @@ export function ProjectList() {
           <ProjectCard
             name={"Eyecane"}
             link={"/eyecane"}
-            image={"/images/eyecane/designsystem-main.png"}
+            image={""}
             date={"2024.01 ~ 2024.12"}
           />
           <ProjectCard
@@ -32,8 +32,8 @@ export function ProjectList() {
             date={""}
           />
           <ProjectCard
-            name={"아이돌 팬사이트"}
-            link={"/idolfan"}
+            name={"커뮤니티, 광고 배너"}
+            link={"/banner"}
             image={""}
             date={""}
           />

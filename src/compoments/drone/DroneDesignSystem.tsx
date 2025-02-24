@@ -1,6 +1,6 @@
 export function DroneDesignSystem() {
   return (
-    <div className="w-full min-w-[1440px] pt-10 border-zinc-200 border-t-[1px]">
+    <div className="w-full max-w-[1440px] pt-10 border-zinc-200 border-t-[1px]">
       <div className="w-full items-center max-w-[1024px] mx-auto flex flex-col justify-center   pb-6  ">
         {/* Design Concept Section */}
         <p className="w-full text-center mb-6 md:mb-10 text-base md:text-lg font-semibold">
@@ -50,7 +50,7 @@ export function DroneDesignSystem() {
           alt="디자인시스템 메인 이미지"
         />
 
-        <p className="w-full min-w-[1440px] text-center mb-6 md:mb-10 text-base md:text-lg font-semibold border-zinc-200 border-t-[1px] pt-10">
+        <p className="w-full  max-w-[1440px] text-center mb-6 md:mb-10 text-base md:text-lg font-semibold border-zinc-200 border-t-[1px] pt-10">
           Design System
         </p>
 
