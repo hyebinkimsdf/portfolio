@@ -4,7 +4,7 @@ export default function About() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="w-full h-full mx-auto flex flex-col md:flex-row justify-center items-center gap-20 min-w-[550px] px-4 py-8 relative">
+    <div className="w-full h-full mx-auto flex flex-col md:flex-row justify-center items-center gap-20 min-w-[300px] px-4 py-8 relative">
       <div
         className="relative group"
         onMouseEnter={() => setIsHovered(true)}
@@ -77,10 +77,35 @@ export default function About() {
             </p>
           </a>
         ))}
-      </div>
+        <div className="border-t-[1px] border-zinc-600 my-4 pt-4">
+          <p className="text-2xl mb-4 font-semibold ">주요 경력</p>
+          <p className=" text-zinc-200 mb-1">
+            요필 | 디자인팀 | UX/UI 디자이너 인턴 | 2024.06 ~ 2024.09
+          </p>
+          <p className="text-sm text-zinc-400 mb-2">
+            - 네이버 고객센터 디자인 담당, 웹 아커머스, 커뮤니케이션 사이트 운영
+          </p>
+          <p className=" text-zinc-200 mb-1">
+            핸디커뮤니케이션즈 | 개발팀 | 배너, UX/UI 디자이너 사원 | 2022.07 ~
+            24.01
+          </p>
+          <p className="text-sm text-zinc-400">
+            - 저시력자 App UI/UX 디자인 리드, 게임 UI 디자이너, 커뮤니티 이벤트
+            배너 제작, 광고 배너 제작
+          </p>
+        </div>
+        <div className="border-t-[1px] border-zinc-600  my-4 pt-4 flex flex-col gap-2">
+          <p className="text-2xl mb-4 font-">학력 & 교육</p>
+          <p className=" text-zinc-200 mb-1">
+            JavaScript 웹 풀스택 프론트엔드 개발자 실무과정 3기 | 2024.01 ~
+            2024.12
+          </p>
 
-      {/* 배경 그라디언트 효과 */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-900/5 to-transparent opacity-20 pointer-events-none" />
+          <p className=" text-zinc-200 mb-1">
+            영산대학교 4년제 졸업 | 게임영상콘텐츠학과 | 2017.03 ~ 2023.02
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
