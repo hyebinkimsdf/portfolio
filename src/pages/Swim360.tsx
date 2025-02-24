@@ -106,7 +106,7 @@ export function Swim360() {
             <p className="text-zinc-400 font-extralight text-xs mb-2 ">
               UI/UX Design
             </p>
-            <p className="mb-2">Drone Data List</p>
+            <p className="mb-2">Product List</p>
             <p className="text-2xl">Interaction Design</p>
             <p className="text-base font-normal">
               상품 리스트에 인터렉션을 넣어 호버했을 시 상품의 뒷면을 보여주며
@@ -128,7 +128,7 @@ export function Swim360() {
             <p className="text-zinc-400 font-extralight text-xs mb-2 ">
               UI/UX Design
             </p>
-            <p className="mb-2">Drone Data List</p>
+            <p className="mb-2">Product Detail</p>
             <p className="text-2xl">3D 제공</p>
             <p className="text-base font-normal">
               React Three Fiber을 사용하여 3D 오브젝트를 넣고 수영복의 젖은
@@ -151,7 +151,7 @@ export function Swim360() {
             <p className="text-zinc-400 font-extralight text-xs mb-2 ">
               UI/UX Design
             </p>
-            <p className="mb-2">Drone Data List</p>
+            <p className="mb-2">Cart</p>
             <p className="text-2xl">디자인 통일과 심플함</p>
             <p className="text-base font-normal mb-5">
               최대한 필요한 정보만 입력하고 복잡한 이동 흐름을 사용하지 않아
