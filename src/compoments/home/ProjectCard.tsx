@@ -6,10 +6,23 @@ interface ProjectCardProp {
   link: string;
   image: string;
   date: string;
+  tool?: "figma" | "photoshop"; // 선택적 tool prop 추가
 }
 
-export function ProjectCard({ name, link, image, date }: ProjectCardProp) {
+export function ProjectCard({
+  name,
+  link,
+  image,
+  date,
+  tool = "figma",
+}: ProjectCardProp) {
   const [isHovered, setIsHovered] = useState(false);
+
+  // 도구 이미지 경로 설정
+  const toolImagePath =
+    tool === "figma"
+      ? "/images/tools/figma.png"
+      : "/images/tools/photoshop.png";
 
   return (
     <Link to={link}>
@@ -85,8 +98,9 @@ export function ProjectCard({ name, link, image, date }: ProjectCardProp) {
               >
                 <p>{date}</p>
                 <img
-                  src="/images/tools/figma.png"
-                  className="w-10 h-10 mx-auto mt-4 "
+                  src={toolImagePath}
+                  alt={tool === "figma" ? "Figma" : "Photoshop"}
+                  className="w-10 h-10 mx-auto mt-4"
                 />
                 <p className="pt-4">View Project</p>
               </div>
