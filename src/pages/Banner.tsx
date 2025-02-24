@@ -45,6 +45,11 @@ export function Banner() {
       alt: "유미의 세포들 일본 배너 2",
       width: "320px",
     },
+    {
+      src: "/images/banner/bi.png",
+      alt: "영웅 기사단 BI ",
+      width: "320px",
+    },
   ];
 
   // 이미지 클릭 시 모달 표시
@@ -124,11 +129,11 @@ export function Banner() {
       </div>
 
       {/*배너 이미지 리스트*/}
-      <div className="flex w-full max-w-[1440px] gap-4 flex-wrap justify-center mt-8">
+      <div className="flex w-full max-w-[1440px] gap-4 flex-wrap  justify-center mt-8">
         {bannerImages.map((image, index) => (
           <div
             key={index}
-            className="relative m-2 group overflow-hidden cursor-pointer"
+            className="relative items-center flex m-2 group overflow-hidden cursor-pointer"
             onClick={() => handleImageClick(index)}
           >
             <img
